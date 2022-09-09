@@ -27,13 +27,15 @@ bind -T ranger v split-window -h  -c "#{pane_current_path}" "ranger ."
 bind -T ranger V split-window -hf -c "#{pane_current_path}" "ranger ."
 bind -T ranger r new-window  -c "#{pane_current_path}" -n "ranger" "ranger ."
 
+
 # Launch Manpage
+%hidden ZSH_FUNCTIONS="$XDG_CONFIG_HOME/zsh/functions.zsh"
 bind -T prefix  m switch-client -T manpage 
-bind -T manpage h command-prompt -p man "split-window  'source ~/.zshrc && m %1'"
-bind -T manpage H command-prompt -p man "split-window -f 'source ~/.zshrc && m %1'"
-bind -T manpage v command-prompt -p man "split-window -h 'source ~/.zshrc && m %1'"
-bind -T manpage V command-prompt -p man "split-window -hf 'source ~/.zshrc && m %1'"
-bind -T manpage m command-prompt -p man "new-window -n 'man %1' 'source ~/.zshrc && m %1'"
+bind -T manpage h command-prompt -p man "split-window  'source $ZSH_FUNCTIONS && m %1'"
+bind -T manpage H command-prompt -p man "split-window -f 'source $ZSH_FUNCTIONS && m %1'"
+bind -T manpage v command-prompt -p man "split-window -h 'source $ZSH_FUNCTIONS && m %1'"
+bind -T manpage V command-prompt -p man "split-window -hf 'source $ZSH_FUNCTIONS && m %1'"
+bind -T manpage m command-prompt -p man "new-window -n 'man %1' 'source $ZSH_FUNCTIONS && m %1'"
 
 # Select pre-defined windows
 bind -T prefix e switch-client -T window-selector
