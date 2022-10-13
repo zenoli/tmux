@@ -27,6 +27,14 @@ bind -T ranger v split-window -h  -c "#{pane_current_path}" "ranger ."
 bind -T ranger V split-window -hf -c "#{pane_current_path}" "ranger ."
 bind -T ranger r new-window  -c "#{pane_current_path}" -n "ranger" "ranger ."
 
+# Launch Ranger
+bind -T prefix l switch-client -T lf 
+bind -T lf h split-window     -c "#{pane_current_path}" "lfrun"
+bind -T lf H split-window -f  -c "#{pane_current_path}" "lfrun"
+bind -T lf v split-window -h  -c "#{pane_current_path}" "lfrun"
+bind -T lf V split-window -hf -c "#{pane_current_path}" "lfrun"
+bind -T lf l new-window  -c "#{pane_current_path}" -n "lf" "lfrun"
+
 
 # Launch Manpage
 %hidden ZSH_FUNCTIONS="$XDG_CONFIG_HOME/zsh/functions.zsh"
