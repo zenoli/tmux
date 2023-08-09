@@ -35,7 +35,6 @@ bind-key -T lf v split-window -h  -c "#{pane_current_path}" "lfrun"
 bind-key -T lf V split-window -hf -c "#{pane_current_path}" "lfrun"
 bind-key -T lf l new-window  -c "#{pane_current_path}" -n "lf" "lfrun"
 
-
 # Launch Manpage
 %hidden ZSH_FUNCTIONS="$XDG_CONFIG_HOME/zsh/functions.zsh"
 bind-key -T prefix  m switch-client -T manpage 
