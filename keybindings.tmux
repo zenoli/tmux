@@ -60,9 +60,11 @@ bind-key -n C-Up resize-pane -U 5
 bind-key -n C-Left resize-pane -L 5
 bind-key -n C-Right resize-pane -R 5
 
-# Shift + Alt to switch windows
-bind-key -n M-H previous-window
-bind-key -n M-L next-window
+# Shift + Alt to switch windows or sessions
+bind -n M-H previous-window
+bind -n M-L next-window
+bind -n M-N switch-client -n
+bind -n M-P switch-client -p
 
 # Swap windows
 bind-key -r "<" swap-window -d -t -1
